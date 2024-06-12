@@ -92,19 +92,6 @@ function ThematicApp({onCountyChange:reportCountyChange, scrollWheel}) {
                   opacity: 0.7
                 }
               )
-            : thematic === "aspect" 
-            ? new ImageryLayer(
-                {
-                    url:"https://elevation.arcgis.com/arcgis/rest/services/WorldElevation/Terrain/ImageServer",
-                    opacity: 0.7,
-                    rasterFunction: {
-                      functionName: "Aspect_Map"
-                    },
-                    customParameters:{
-                      token: "AAPKb4dd38a0cc464df48fe57ade48d43babV1zY0xPMJuNx59g4jVh4MYvubEv-kqNHXMwMBhatYgczY4YJkYF4o4XzQjsnK8dp"
-                    }
-                }
-              )
             : new FeatureLayer(
                 {
                   url:"https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/US_Drought_Intensity_v1/FeatureServer/3",
